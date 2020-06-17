@@ -1,14 +1,16 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 module.exports = {
   entry: './src/js/index.js',
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
   },
+
   module: {
-    rules: [{
+    rules: [
       test: /\.(sa|sc|c)ss$/,
       use: [
         {
@@ -16,13 +18,14 @@ module.exports = {
          },
         'css-loader',
         'sass-loader',
+
         ],
        },
-    ],
+   ]
   },
-  plugins: [
-    new MiniCssExtractPlugin({
-        filename: 'style.css'
-      })
-    ],
-}
+    plugins: [new MiniCssExtractPlugin({
+    filename: 'style.css'
+
+   })],
+  
+  };
