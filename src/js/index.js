@@ -1,4 +1,4 @@
-import '.styles/style.scss';
+import './styles/style.scss';
 
 import { sum } from './sum.js';
 console.log( 'It"s fine working' );
