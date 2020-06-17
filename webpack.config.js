@@ -8,29 +8,24 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
   },
-},
-module: {
-  rules: [
-    {
-      test: /\.s[ac]ss$/i,
+
+  module: {
+    rules: [
+      test: /\.(sa|sc|c)ss$/,
       use: [
-        // fallback to style-loader in development
-        process.env.NODE_ENV !== 'production'
-          ? 'style-loader'
-          : MiniCssExtractPlugin.loader,
+        {
+          loader: MiniCssExtractPlugin.loader,
+         },
         'css-loader',
         'sass-loader',
-      ],
-    },
-  ],
-},
-plugins: [
-  new MiniCssExtractPlugin({
-    // Options similar to the same options in webpackOptions.output
-    // both options are optional
-    filename: 'style.css',
-    
-  }),
-],
+
+        ],
+       },
+   ]
+  },
+    plugins: [new MiniCssExtractPlugin({
+    filename: 'style.css'
+
+   })],
   
   };
