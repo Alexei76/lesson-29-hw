@@ -1,5 +1,5 @@
 import '../styles/style.scss';
-import  './date.js';
+import  './date';
 import { cities } from '../data/cityPhoto.js';
 
 
