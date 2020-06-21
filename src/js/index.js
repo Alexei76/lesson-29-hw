@@ -14,4 +14,5 @@ function main(){
     
     let arr = [1,2,3];
     let barr = [1,2,3];
-    console.log(lodash.isEqual(arr,barr))
+    console.log(lodash.isEqual(arr,barr));
+    console.log(cities);
