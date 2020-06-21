@@ -1,5 +1,7 @@
 import '../styles/style.scss';
-import lodash from 'lodash-es';
+
+import { isEqual } from 'lodash-es';
+
 import { cities } from '../data/cityPhoto.js';
 
 import { sum } from './sum.js';
